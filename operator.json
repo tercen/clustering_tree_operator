@@ -1,9 +1,9 @@
 {
-  "name": "Median",
-  "description": "Return the medium value of a cell",
-  "tags": ["basic statistics"],
+  "name": "Hierarchical clustering tree",
+  "description": "Returns a hierarchical clustering tree to be projected in Tercen.",
+  "tags": ["clustering", "tree"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_operator"],
+  "urls": ["https://github.com/tercen/clustering_tree_operator"],
   "properties": []
 }
 

@@ -1,7 +1,8 @@
-# Median operator
+# Hierarchical clustering tree operator
 
 ##### Description
-`Median` operator returns the median of a set of data points.
+
+`clustering_tree` operator returns a hierarchical clustering tree to be projected in Tercen.
 
 ##### Usage
 
