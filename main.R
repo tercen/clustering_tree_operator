@@ -108,7 +108,7 @@ df_out <- as.data.frame(mat) %>%
 df_out$tree_dim1 <- formatC(as.numeric(df_out$tree_dim1), width = max(nchar(df_out$tree_dim1)), format = "d", flag = "0")
 df_out$tree_dim2 <- formatC(as.numeric(df_out$tree_dim2), width = max(nchar(df_out$tree_dim2)), format = "d", flag = "0")
 
-labs <- ctx$rselect()[[1]]
+labs <- ctx$rselect()[[1]][hc$order]
 df_out$tip_labels <- labs[cut(as.numeric(df_out$tree_dim2), length(labs))]
 
 table = tercen::dataframe.as.table(ctx$addNamespace(df_out))
