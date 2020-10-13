@@ -13,7 +13,7 @@ data = (ctx = tercenCtx())  %>%
     fun.aggregate = mean
   )
 
-hc <- hclust(dist(t(data[,])))
+hc <- hclust(as.dist(data))
 dend <- as.dendrogram(hc)
 coord <- get_nodes_xy(dend, type = c("rectangle"), center = TRUE, horiz = FALSE)
 

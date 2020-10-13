@@ -4,8 +4,8 @@ library(dendextend)
 library(tidyr)
 library(reshape2)
 
-options("tercen.workflowId" = "d330322c43363eb4f9b27738ef0042b9")
-options("tercen.stepId"     = "1ae42627-e9ce-4d9f-9797-8700adfd7718")
+options("tercen.workflowId" = "a77770c3923fad0ca99b77fa8905471d")
+options("tercen.stepId"     = "d2db91c1-c2dc-4bdd-8adb-59108fdd8478")
 
 data = (ctx = tercenCtx())  %>% 
   select(.ci, .ri, .y) %>% 
@@ -16,7 +16,7 @@ data = (ctx = tercenCtx())  %>%
     fun.aggregate = mean
   )
 
-hc <- hclust(dist(t(data[,])))
+hc <- hclust(as.dist(data))
 dend <- as.dendrogram(hc)
 coord <- get_nodes_xy(dend, type = c("rectangle"), center = TRUE, horiz = FALSE)
 
